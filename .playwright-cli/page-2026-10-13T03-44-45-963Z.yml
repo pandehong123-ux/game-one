@@ -1,0 +1,118 @@
+- generic [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - link "运河智运首页" [ref=f1e3] [cursor=pointer]:
+      - /url: ./index.html
+      - generic [ref=f1e4]:
+        - text: 川
+        - generic [ref=f1e5]: ✦
+      - generic [ref=f1e6]:
+        - text: 运河智运
+        - generic [ref=f1e7]: CANAL INTELLIGENCE
+    - generic [ref=f1e8]:
+      - generic [ref=f1e9]: ⌘
+      - generic [ref=f1e10]:
+        - generic [ref=f1e11]: 欢迎登舰，
+        - text: 少年总指挥官
+  - main [ref=f1e12]:
+    - generic [ref=f1e13]:
+      - generic [ref=f1e14]:
+        - generic [ref=f1e15]: 千年运河 · 智联未来 / MISSION CONTROL
+        - heading "运河智运大冒险" [level=1] [ref=f1e16]
+        - paragraph [ref=f1e17]: 驾驶无人船，穿梭千年水道。让每一份货物，聪明抵达。
+      - generic [ref=f1e18]:
+        - button "ⓘ 航行指南" [ref=f1e19] [cursor=pointer]
+        - button "♫ 音效关" [ref=f1e20] [cursor=pointer]
+    - region "游戏控制中心" [ref=f1e21]:
+      - complementary [ref=f1e22]:
+        - generic [ref=f1e23]:
+          - generic [ref=f1e24]:
+            - generic [ref=f1e25]: "01"
+            - heading "古运河启航" [level=3] [ref=f1e27]
+          - generic [ref=f1e28]:
+            - generic [ref=f1e29]: "02"
+            - heading "智慧港调度" [level=3] [ref=f1e31]
+          - generic [ref=f1e32]:
+            - generic [ref=f1e33]: "03"
+            - heading "未来物流港" [level=3] [ref=f1e35]
+      - generic [ref=f1e36]:
+        - generic [ref=f1e37]:
+          - generic [ref=f1e39]:
+            - generic [ref=f1e40]: 智慧值
+            - strong [ref=f1e41]: "0"
+          - generic [ref=f1e43]:
+            - generic [ref=f1e44]: 运输任务
+            - strong [ref=f1e45]:
+              - text: "0"
+              - emphasis [ref=f1e46]: / 10
+          - generic [ref=f1e48]:
+            - generic [ref=f1e49]: 船体状态
+            - strong [ref=f1e50]: ♥ ♥ ♥
+          - button "暂停游戏" [disabled] [ref=f1e51]: Ⅱ
+        - generic [ref=f1e52]:
+          - generic:
+            - generic: 杭州运河区域
+            - generic: LIVE MAP
+          - generic "智慧运河物流迷宫，使用方向键或WASD驾驶无人船" [ref=f1e53]
+          - generic:
+            - text: 30°16′ N 120°09′ E
+            - generic: AI NAVIGATION SYSTEM · V.3.0
+          - dialog [ref=f1e55]:
+            - generic [ref=f1e56]: WELCOME ABOARD / 01
+            - generic [ref=f1e57]: ⌁
+            - heading "少年指挥官，请登舰" [level=2] [ref=f1e58]
+            - paragraph [ref=f1e59]: 千年运河，一场新的冒险。驾驶「运小智」，开启你的智慧物流航程。
+            - generic [ref=f1e60]:
+              - generic [ref=f1e61]:
+                - strong [ref=f1e62]: "03"
+                - generic [ref=f1e63]: 探索航段
+              - generic [ref=f1e64]:
+                - strong [ref=f1e65]: "20"
+                - generic [ref=f1e66]: 首关芯片目标
+              - generic [ref=f1e67]:
+                - strong [ref=f1e68]: ♥ ♥ ♥
+                - generic [ref=f1e69]: 船体生命
+            - button "开启航程 →" [active] [ref=f1e70] [cursor=pointer]
+            - generic [ref=f1e71]: 方向键 / WASD 驾驶 · 空格暂停 · 支持触屏
+          - status
+        - generic [ref=f1e72]: 无人船 智慧芯片 货物箱 挑战机器人
+        - generic "触屏驾驶" [ref=f1e78]:
+          - button "向左" [ref=f1e79] [cursor=pointer]: ←
+          - generic [ref=f1e80]:
+            - button "向上" [ref=f1e81] [cursor=pointer]: ↑
+            - button "向下" [ref=f1e82] [cursor=pointer]: ↓
+          - button "向右" [ref=f1e83] [cursor=pointer]: →
+      - complementary [ref=f1e84]:
+        - generic [ref=f1e85]:
+          - generic [ref=f1e86]:
+            - text: 主线任务
+            - generic [ref=f1e87]: 01 / 03
+          - heading "让智慧点亮运河" [level=2] [ref=f1e88]
+          - paragraph [ref=f1e89]: 沿运河航行，收集散落在水道中的智慧物流芯片。
+          - generic [ref=f1e90]:
+            - generic [ref=f1e91]: ✧ 收集智慧芯片
+            - generic [ref=f1e92]: 0 / 20
+          - generic [ref=f1e94]:
+            - text: 任务奖励
+            - generic [ref=f1e95]: ✦ 200 智慧值
+        - generic [ref=f1e96]:
+          - generic [ref=f1e97]:
+            - text: 沿途补给
+            - generic [ref=f1e98]: SUPPLIES
+          - generic [ref=f1e99]:
+            - generic [ref=f1e100]: ✧
+            - generic [ref=f1e101]:
+              - heading "智慧物流芯片 +10" [level=4] [ref=f1e102]
+              - paragraph [ref=f1e103]: 收集数据，点亮智慧网络
+          - generic [ref=f1e104]:
+            - generic [ref=f1e105]: ▣
+            - generic [ref=f1e106]:
+              - heading "货物箱" [level=4] [ref=f1e107]
+              - paragraph [ref=f1e108]: 拾取后返回智慧港交付
+          - generic [ref=f1e109]:
+            - generic [ref=f1e110]: ϟ
+            - generic [ref=f1e111]:
+              - heading "AI 能量电池" [level=4] [ref=f1e112]
+              - paragraph [ref=f1e113]: 加速 6 秒 · 不提供无敌
+    - generic [ref=f1e114]:
+      - generic [ref=f1e115]: 大运河文化 × 人工智能 × 绿色物流
+      - generic [ref=f1e116]: 空格 暂停 / 继续

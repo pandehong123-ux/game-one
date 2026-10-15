@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09171f">
+  <title>运河智运大冒险 — AI物流小先锋</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="运河智运首页"><span class="brand-mark">川<span>✦</span></span><span>运河智运<span class="brand-en">CANAL INTELLIGENCE</span></span><span class="edition">青少年探索计划</span></a>
+    <div class="system-status"><i></i> 智慧运河网络已连接 <span> / </span><span id="clock">00:00</span></div>
+    <div class="commander"><span class="avatar">⌘</span><span><small>欢迎登舰，</small>少年总指挥官</span></div>
+  </header>
+  <main>
+    <section class="heading"><div><div class="eyebrow">千年运河 · 智联未来 <span> / MISSION CONTROL</span></div><h1>运河智运大冒险<span>AI物流小先锋</span></h1><p>驾驶无人船，穿梭千年水道。让每一份货物，聪明抵达。</p></div><div class="heading-actions"><button id="fullscreenButton" class="plain-button" aria-pressed="false">⛶ 全屏</button><button id="helpButton" class="plain-button">ⓘ 航行指南</button><button id="soundButton" class="plain-button" aria-pressed="false">♫ 音效关</button></div></section>
+    <section class="dashboard" aria-label="游戏控制中心">
+      <aside class="left-panel">
+        <div class="panel-label">航行计划 <span>EXPEDITION</span></div>
+        <div class="level-list" id="levelList">
+          <div class="level-card active"><span class="level-index">01</span><div><h3>古运河启航</h3><p>杭州 · 京杭大运河南端</p><small>当前航段 <b>●</b></small></div></div>
+          <div class="level-card locked"><span class="level-index">02</span><div><h3>智慧港调度</h3><p>苏州 · 智能物流枢纽</p><small>完成上一航段解锁 <b>⌑</b></small></div></div>
+          <div class="level-card locked"><span class="level-index">03</span><div><h3>未来物流港</h3><p>北京 · 未来运河网络</p><small>完成上一航段解锁 <b>⌑</b></small></div></div>
+        </div>
+        <section class="vessel-card"><div class="panel-label">我的无人船 <span class="mint">ONLINE</span></div><svg class="ship-preview" viewBox="0 0 230 120" aria-label="蓝色未来运输船"><defs><linearGradient id="hull" x2="0" y2="1"><stop stop-color="#e4ffff"/><stop offset="1" stop-color="#72bfc7"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5"/></filter></defs><ellipse cx="114" cy="89" rx="85" ry="15" fill="#42e8ce" opacity=".13"/><path d="M32 80L80 45 178 45 206 61 159 96 64 96Z" fill="#061e2a" stroke="#2b6570"/><path d="M45 68L87 32 163 32 196 56 153 83 72 83Z" fill="url(#hull)"/><path d="M72 83L153 83 196 56 192 70 153 97 74 97 45 81 45 68Z" fill="#377d90"/><path d="M84 53L110 32 147 32 168 48 143 68 108 68Z" fill="#b7ebe5"/><path d="M105 49L123 35 146 35 160 46 143 59 119 59Z" fill="#123f5b" stroke="#4bebde"/><path d="M78 85H146L181 63" fill="none" stroke="#6affdf" stroke-width="3"/><path d="M37 78L13 85M48 87L24 95" stroke="#50eacc" stroke-width="4" opacity=".7"/><path d="M151 24V12M145 15H158" stroke="#79e6da"/><circle cx="151" cy="11" r="3" fill="#76ffe0"/></svg><h3>运小智 <span>YUN-X01</span></h3><p>AI 智能无人运输船</p><div class="vessel-stats"><span>动力状态 <b id="speedLabel">标准巡航</b></span><div class="energy-track"><i id="boostBar"></i></div><span>船载货物 <b id="cargoLabel">0 箱</b></span></div></section>
+        <div class="culture-card"><span>⌁ 运河知识电台</span><p id="cultureText">京杭大运河全长约 1,800 公里，是世界上里程最长的古代运河。</p><small>让古老水道，流动新的智慧。</small></div>
+      </aside>
+      <section class="center-panel">
+        <div class="hud"><div><span class="hud-icon">✧</span><span><small>智慧值</small><strong id="score">0</strong></span></div><div><span class="hud-icon amber">▣</span><span><small>运输任务</small><strong><span id="delivered">0</span><em>/ 10</em></strong></span></div><div><span><small>船体状态</small><strong id="lives" class="hearts" aria-label="3条生命">♥ ♥ ♥</strong></span></div><button id="pauseButton" class="pause-button" aria-label="暂停游戏" disabled>Ⅱ</button></div>
+        <div class="map-shell" id="mapShell"><div class="map-caption"><span><i></i> <b id="mapName">杭州运河区域</b><small id="mapCode">HANGZHOU / SECTOR 01</small></span><span class="live-label">LIVE MAP <i></i></span></div>
+          <canvas id="gameCanvas" width="950" height="750" aria-label="智慧运河物流迷宫，使用方向键或WASD驾驶无人船" tabindex="0"></canvas>
+          <div class="map-coordinates">30°16′ N &nbsp; 120°09′ E <span>AI NAVIGATION SYSTEM · V.3.0</span></div>
+          <div class="overlay" id="overlay"><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div></div>
+          <div class="toast" id="toast" role="status"></div>
+        </div>
+        <div class="map-bottom"><span><i class="legend-dot player-dot"></i> 无人船 <i class="legend-dot chip-dot"></i> 智慧芯片 <i class="legend-dot cargo-dot"></i> 货物箱 <i class="legend-dot robot-dot"></i> 挑战机器人</span><span class="keyboard-tip"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> / WASD 驾驶</span></div>
+        <div class="touch-controls" aria-label="触屏驾驶"><button data-dir="left" aria-label="向左">←</button><div><button data-dir="up" aria-label="向上">↑</button><button data-dir="down" aria-label="向下">↓</button></div><button data-dir="right" aria-label="向右">→</button></div>
+      </section>
+      <aside class="right-panel"><div class="panel-label">任务指挥台 <span class="signal">▂▄▆</span></div><section class="mission-card"><span class="mission-tag">主线任务 <span id="missionNumber">01 / 03</span></span><h2 id="missionTitle">让智慧点亮运河</h2><p id="missionDescription">沿运河航行，收集散落在水道中的智慧物流芯片。</p><div class="objective"><span>✧ <span id="objectiveLabel">收集智慧芯片</span></span><b id="objectiveCount">0 / 20</b></div><div class="progress-track"><i id="missionProgress"></i></div><div id="deliveryObjective" class="delivery-objective" hidden></div><div class="reward">任务奖励 <span>✦ <b id="rewardLabel">200</b> 智慧值</span></div></section>
+      <section class="guide-section"><div class="panel-label">沿途补给 <span>SUPPLIES</span></div><div class="guide-item"><span class="item-graphic chip-graphic">✧</span><div><h4>智慧物流芯片 <b>+10</b></h4><p>收集数据，点亮智慧网络</p></div></div><div class="guide-item"><span class="item-graphic crate-graphic">▣</span><div><h4>货物箱</h4><p>拾取后返回智慧港交付</p></div></div><div class="guide-item"><span class="item-graphic battery-graphic">ϟ</span><div><h4>AI 能量电池</h4><p>加速 6 秒 · 不提供无敌</p></div></div></section>
+      <section class="risk-card"><div class="panel-label">航道提醒 <span>⚠</span></div><p>留意物流挑战机器人！<br>接触将损失 <b>1 点</b>船体生命。</p><div><i class="bot-color patrol"></i>交通管理 <span>定线巡逻</span></div><div><i class="bot-color chase"></i>拥堵检测 <span>智能追踪</span></div><div><i class="bot-color random"></i>海关检查 <span>随机移动</span></div></section><div class="connection"><i></i><span>AI 航线辅助已就绪<small>保持探索，每一条水道都有新发现。</small></span></div>
+      </aside>
+    </section>
+    <footer><span>大运河文化 × 人工智能 × 绿色物流</span><span>探索 · 连接 · 创造 <b>✦</b> 让未来从这里启航</span><span>空格 暂停 / 继续</span></footer>
+  </main>
+</body>
+</html>
+
